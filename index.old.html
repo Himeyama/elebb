@@ -5,36 +5,42 @@
     </head>
     <body>
         <canvas id="canvas" width=1600 height=100></canvas>
-        <script src="elebb.ex.js"></script>
+        <script src="elebb.js"></script>
 
-        <table id="panel">
+        <table id="panel" border="1">
+            <!-- <tr>
+                <th>文字列</th>
+                <td><input id="str"></input></td>
+            </tr> -->
             <tr class="green">
                 <th>緑</th>
                 <td colspan="2"><input id="str_g"></input></td>
+                <!-- <td><button onclick="run('#0f0')">表示</button></td> -->
             </tr>
             <tr class="red">
                 <th>赤</th>
                 <td colspan="2"><input id="str_r"></input></td>
+                <!-- <td><button onclick="run('#f00')">表示</button></td> -->
             </tr>
             <tr class="orange">
-                <th>オ</th>
+                <th>オレンジ</th>
                 <td colspan="2"><input id="str_o"></input></td>
+                <!-- <td><button onclick="run('#f80')">表示</button></td> -->
             </tr>
             <tr>
                 <th class="n"></th>
-                <td><button onclick="elebb.run()">表示</button></td>
-                <td><button onclick="elebb.reset_elebb()">リセット</button></td>
+                <td><button onclick="run()">表示</button></td>
+                <td><button onclick="reset_elebb()">リセット</button></td>
             </tr>
         </table>
 
     </body>
     <style>
+#canvas{
+    background-color: #1a1a1a;
+}
 #panel{
-    font-size: 3em;
-    table-layout: fixed;
-    border-spacing: 0;
-    border-collapse: collapse;
-    width: 100%;
+    font-size: 5em;
 }
 #panel .n{
     empty-cells: hide;
@@ -42,11 +48,10 @@
 #panel input{
     font-size: 1em;
     font-family: MS Gothic, monospace;
-    width: 100%;
+    width: 16em;
 }
 #panel button{
     font-size: 1em;
-    width: 100%;
 }
 #panel .green, #panel .green input{
     color: #4CAF50;
@@ -57,8 +62,6 @@
 #panel .orange, #panel .orange input{
     color: #FF9800;
 }
-#panel th{
-    width: 2em;
-}
+
     </style>
 </html>
