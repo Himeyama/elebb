@@ -108,8 +108,3 @@ class EleBB{
     }
 }
 
-
-EleBB.load_font() // フォントの読み込み
-elebb = new EleBB
-elebb.element = "canvas"
-elebb.reset_elebb()
