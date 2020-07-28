@@ -4,7 +4,6 @@ json_file=fonts.json
 json="{"
 while read line; do
     convert +antialias -font ~/.fonts/msgothic.ttc -pointsize 16 label:"$line" -extent 16x16 temp.png
-    
     ary="["
     n=0
     for i in `./readfont`; do
