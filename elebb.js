@@ -88,7 +88,7 @@ function run_color(str, color){
         console.log(str[i])
         if(str[i] != " ")
             color_elebb(p, getfont(fonts, str[i]), color)
-        if(str[i].charCodeAt() < 128)
+        if(str[i].charCodeAt() < 128 || "ｰ".charCodeAt() <= str[i].charCodeAt() && "ﾟ".charCodeAt() >= str[i].charCodeAt())
             p += 0.5
         else
             p += 1
